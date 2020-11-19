@@ -16,6 +16,6 @@ public class ChocolateFrosting extends FrostingDecorator {
 
     @Override
     public String getDescription() {
-        return cake.getDescription() + ", Chocolate Frosting";
+        return cake.getDescription() + ", with Chocolate Frosting";
     }
 }

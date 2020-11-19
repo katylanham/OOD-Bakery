@@ -11,20 +11,20 @@ public abstract class Cake {
         return description;
     }
 
-    public void prepareDough() {
-        System.out.println("Preparing the dough...");
+    public void prepareBatter(String flavor) {
+        System.out.println("Preparing the " + flavor + " batter...");
     }
 
-    public void cookDough() {
-        System.out.println("Cooking the dough...");
+    public void cookBatter(String flavor) {
+        System.out.println("Cooking the " + flavor + " batter...");
     }
 
     public void frostCake(String frosting) {
-            System.out.println("Frosting the cake with " + frosting + "frosting.");
+            System.out.println("Frosting the cake with " + frosting + "...");
     }
 
     public void addSprinkles(String sprinkles) {
-            System.out.println("Adding " + sprinkles + " to your cake.");
+            System.out.println("Adding " + sprinkles + " to your cake...");
     }
 
     public void dishUp() {

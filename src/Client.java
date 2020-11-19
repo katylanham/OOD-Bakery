@@ -38,6 +38,7 @@ public class Client {
                         e.printStackTrace();
                     }
 
+                    assert answer != null;
                     if (answer.equals("1")) {
                         cakeType = "Rectangular Cake";
                         System.out.println("Rectangular Cake is chosen.");
@@ -46,8 +47,6 @@ public class Client {
                         cakeType = "Circular Cake";
                         System.out.println("*** Circular Cake is chosen.");
                         break;
-                    } else {
-                        continue;
                     }
                 }
                 System.out.println("");
@@ -106,10 +105,10 @@ public class Client {
                         sprinklesList.add("White Sprinkles");
                         System.out.println("*** White Sprinkles are chosen.");
                     } else if (value == 2) {
-                        frostingList.add("Multicolor Sprinkles");
+                        sprinklesList.add("Multicolor Sprinkles");
                         System.out.println("Multicolor Sprinkles are chosen.");
                     } else if (value == 3) {
-                        frostingList.add("Coconut Flakes");
+                        sprinklesList.add("Coconut Flakes");
                         System.out.println("Coconut Flakes are chosen.");
                     } else break;
                 }

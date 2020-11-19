@@ -8,16 +8,19 @@ import Cake.CakeDecorator.ChocolateCake;
 import Cake.CakeDecorator.ChocolateFrosting;
 import Cake.CakeDecorator.VanillaCake;
 import Cookie.Cookie;
-import Cake.CakeDecorator.*;
 
 
 // Receiver
 public class Baker {
     public static String cakeType="";
     public static String cookieType="";
-    public static String[] cakeFlavorList = null;
-    public static String[] frostingList = null;
-    public static String[] sprinklesList = null;
+    public static String[] cakeFlavorList = {"Vanilla", "Chocolate"};
+    public static String[] frostingList = {"Vanilla", "Chocolate", "Vegan Buttercream"};
+    public static String[] sprinklesList = {"Coconut Flakes", "Multicolor", "White"};
+    String cakeFlavor;
+    String sprinkles;
+    String frosting;
+
     Cake cake;
     Cookie cookie;
     public void getOrder(String factoryType){
@@ -28,13 +31,16 @@ public class Baker {
             cake = factory.makeCake(cakeType); 
 
 
-            cake.prepareDough();
-            cake.cookDough();
+
             cake = decorate(cakeFlavorList, frostingList, sprinklesList);
+            cake.prepareBatter(cakeFlavor);
+            cake.cookBatter(cakeFlavor);
+            cake.frostCake(frosting);
+            cake.addSprinkles(sprinkles);
             cake.dishUp();
 
 
-            System.out.println(cake.getDescription() + " order completed.");
+            System.out.println("Order Completed: " + cake.getDescription() + ".");
             System.out.println("Cost: $" + cake.cost());
 
         }
@@ -53,44 +59,38 @@ public class Baker {
 
     public Cake decorate(String[] cakeFlavorList, String[] frostingList, String[] sprinklesList){
         for (int i = 0; i < cakeFlavorList.length; i++) {
-            String cakeFlavor = cakeFlavorList[i];
-            if(cakeFlavor.equals("Vanilla Cake")){
+            cakeFlavor = cakeFlavorList[i];
+            if(cakeFlavor.equals("Vanilla")){
             	cake = new VanillaCake(cake);
               }
-            else if(cakeFlavor.equals("Chocolate Cake")){
+            else if(cakeFlavor.equals("Chocolate")){
             	cake = new ChocolateCake(cake); 
             }
         }
 
         for (int i = 0; i < frostingList.length; i++) {
-            String frosting = frostingList[i];
-            if(frosting.equals("Vanilla Frosting")){
+            frosting = frostingList[i];
+            if(frosting.equals("Vanilla")){
             	cake = new VanillaFrosting(cake);
-            	cake.frostCake(frosting);
             }
-            else if(frosting.equals("Chocolate Frosting")) {
+            else if(frosting.equals("Chocolate")) {
             	cake = new ChocolateFrosting(cake);
-                cake.frostCake(frosting);
             }
             else if(frosting.equals("Vegan Buttercream")) {
             	cake = new veganButtercream(cake);
-                cake.frostCake(frosting);
             }
         }
 
         for (int i = 0; i < sprinklesList.length; i++) {
-            String sprinkles = sprinklesList[i];
+            sprinkles = sprinklesList[i];
             if(sprinkles.equals("Coconut Flakes")) {
             	cake = new Coconut(cake);
-            	cake.addSprinkles(sprinkles);
             }
-            else if(sprinkles.equals("MultiColor Sprinkles")){
+            else if(sprinkles.equals("MultiColor")){
             	cake = new MultiColor(cake);
-                cake.addSprinkles(sprinkles);
             }
             else if(sprinkles.equals("White")) {
             	cake = new White(cake);
-                cake.addSprinkles(sprinkles);
             }
         }
         return cake;

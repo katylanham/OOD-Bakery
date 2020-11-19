@@ -16,6 +16,6 @@ public class Coconut extends SprinklesDecorator {
 
     @Override
     public String getDescription() {
-        return cake.getDescription() + ", Coconut";
+        return cake.getDescription() + ", and Coconut Flakes";
     }
 }

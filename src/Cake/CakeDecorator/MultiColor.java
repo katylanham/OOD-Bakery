@@ -17,6 +17,6 @@ public class MultiColor extends SprinklesDecorator{
 
     @Override
     public String getDescription() {
-        return cake.getDescription() + ", Multicolor Sprinkles";
+        return cake.getDescription() + ", and Multicolor Sprinkles";
     }
 }

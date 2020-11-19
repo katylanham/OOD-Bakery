@@ -16,6 +16,6 @@ public class ChocolateCake extends CakeFlavorDecorator{
 
     @Override
     public String getDescription() {
-        return cake.getDescription() + ", Chocolate";
+        return cake.getDescription() + ", Chocolate flavored";
     }
 }

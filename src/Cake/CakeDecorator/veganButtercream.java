@@ -16,6 +16,6 @@ public class veganButtercream extends FrostingDecorator {
 
     @Override
     public String getDescription() {
-        return cake.getDescription() + ", Vegan Buttercream Frosting";
+        return cake.getDescription() + ", with Vegan Buttercream Frosting";
     }
 }

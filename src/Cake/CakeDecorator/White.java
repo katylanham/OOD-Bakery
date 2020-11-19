@@ -16,6 +16,6 @@ public class White extends SprinklesDecorator {
 
     @Override
     public String getDescription() {
-        return cake.getDescription() + ", White Sprinkles";
+        return cake.getDescription() + ", and White Sprinkles";
     }
 }
