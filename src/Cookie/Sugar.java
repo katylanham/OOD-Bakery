@@ -18,17 +18,12 @@ public class Sugar extends withNuts{
     }
 
     @Override
-    public void frosting() {
-        System.out.println("make frosting");
-    }
-
-    @Override
-    public void addSprinkles() {
-        System.out.println("Adding sprinkles");
+    public void addNuts() {
+        System.out.println("Adding nuts...");
     }
 
     //hook
-    public boolean customerWantsSprinkles(){
+    public boolean customerWantsNuts(){
         String answer = getUserInput();
 
         if(answer.toLowerCase().startsWith("y")){
@@ -41,7 +36,7 @@ public class Sugar extends withNuts{
 
     private String getUserInput(){
         String answer = null;
-        System.out.println("Would you like sprinkles? --- 0.5$ (y/n)");
+        System.out.println("Would you like nuts? --- $0.50 (y/n)");
 
         BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
         try {

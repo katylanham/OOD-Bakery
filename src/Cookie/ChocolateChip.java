@@ -8,6 +8,6 @@ public class ChocolateChip extends withoutNuts{
 
     @Override
     public String getDescription() {
-        return "Coca Cola";
+        return "Chocolate Chip";
     }
 }

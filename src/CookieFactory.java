@@ -20,7 +20,7 @@ public class CookieFactory {
         else if(cookieType.equals("Peanut Butter")){
             return new PeanutButter();
         }
-        else if(cookieType.equals("ChocolateChip")){
+        else if(cookieType.equals("Chocolate Chip")){
             return new ChocolateChip();
         }
         else if(cookieType.equals("Oatmeal Raisin")){

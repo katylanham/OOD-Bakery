@@ -1,5 +1,9 @@
 package Cookie;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 public abstract class withNuts implements Cookie {
     public abstract double cost();
     public abstract String getDescription();
@@ -7,28 +11,59 @@ public abstract class withNuts implements Cookie {
     //template method
     @Override
     public void prepareCookie() {
-    	getCakeOutOfOven();
-        frosting();
-        bag();
+    	removeFromDisplay();
 
-        if(customerWantsSprinkles()) {
-            addSprinkles();
+        if(customerWantsNuts()) {
+            addNuts();
         }
+
+        if (customerWantsWarmed()) {
+            warm();
+        }
+
+        bag();
     }
 
-    public void getCakeOutOfOven(){
-        System.out.println("Getting the cookie out of the oven");
-    }
+    public void removeFromDisplay() { System.out.println("Removing the cookie from the display case..."); }
 
-    public abstract void frosting();
+    public void warm() { System.out.println("Warming up your cookie..."); }
 
     public void bag(){
-        System.out.println("putting in bag");
+        System.out.println("Putting it in the bag...");
     }
 
-    public abstract void addSprinkles();
+    public abstract void addNuts();
 
-    boolean customerWantsSprinkles(){
+    boolean customerWantsNuts(){
         return true;
+    }
+
+    //hook
+    public boolean customerWantsWarmed(){
+        String answer = getUserInput();
+
+        if(answer.toLowerCase().startsWith("y")){
+            return true;
+        }
+        else
+            return false;
+    }
+
+    private String getUserInput(){
+        String answer = null;
+        System.out.println("Would you like your cookie warmed up? (y/n)");
+
+        BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
+        try {
+            answer = input.readLine();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        if(answer == null){
+            answer = "no";
+        }
+
+        return answer;
     }
 }

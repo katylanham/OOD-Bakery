@@ -21,23 +21,17 @@ public class PeanutButter extends withNuts{
     }
 
     @Override
-    public void frosting() {
+    public void addNuts() {
     	
-        System.out.println("Getting cookie out of display case");
-    }
-
-    @Override
-    public void addSprinkles() {
-    	
-        System.out.println("Adding sprinkles to the cookie");
+        System.out.println("Adding nuts...");
     }
 
     //hook
-    public boolean customerWantsSprinkles(){
+    public boolean customerWantsNuts(){
         String answer = getUserInput();
 
         if(answer.toLowerCase().startsWith("y")){
-            cost = cost + 1.5;
+            cost = cost + 0.5;
             return true;
         }
         else
@@ -46,7 +40,7 @@ public class PeanutButter extends withNuts{
 
     private String getUserInput(){
         String answer = null;
-        System.out.println("Would you to add sprinkles to your cookie for an uocharge? --- 1.5$ (y/n)");
+        System.out.println("Would you like nuts? --- $0.50 (y/n)");
 
         BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
         try {

@@ -28,8 +28,8 @@ public class Client {
 
                 while (true) {
                     System.out.println("Which cake do you want?");
-                    System.out.println("(1) Rectangular Cake --- 5.0$");
-                    System.out.println("(2) Circular Cake --- 4.0$");
+                    System.out.println("(1) Rectangular Cake --- $5.00");
+                    System.out.println("(2) Circular Cake --- $4.00");
 
                     BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
                     try {
@@ -56,8 +56,8 @@ public class Client {
                 Scanner scan = new Scanner(System.in);
                 for (int i = 0; i < 1; i++) {
                     System.out.println("Would you like vanilla or chocolate as the flavor of your cake? Enter the corresponding number.");
-                    System.out.println("(1) Vanilla --- 1.5$");
-                    System.out.println("(2) Chocolate --- 1.25$");
+                    System.out.println("(1) Vanilla --- $1.50");
+                    System.out.println("(2) Chocolate --- $1.25");
                     System.out.println("Enter any number other than 1 or 2 to let the baker pick.");
 
                     int value = scan.nextInt();
@@ -75,9 +75,9 @@ public class Client {
                 Scanner scan2 = new Scanner(System.in);
                 for (int i = 0; i < 1; i++) {
                     System.out.println("What flavor frosting would you like on your cake? Enter the corresponding number.");
-                    System.out.println("(1) Vanilla --- 0.75$");
-                    System.out.println("(2) Chocolate --- 0.65$");
-                    System.out.println("(3) Vegan Buttercream --- 0.85$");
+                    System.out.println("(1) Vanilla --- $0.75");
+                    System.out.println("(2) Chocolate --- $0.65");
+                    System.out.println("(3) Vegan Buttercream --- $0.85");
                     System.out.println("Enter any number other than 1 or 2 to let the baker pick.");
                     int value = scan2.nextInt();
                     if (value == 1) {
@@ -91,15 +91,15 @@ public class Client {
                         System.out.println("*** Vegan Buttercream Frosting is chosen.");
                     } else break;
                 }
-                System.out.println("The flavor of your frosting has been chosen");
+                System.out.println("The flavor of your frosting has been chosen.");
                 System.out.println("");
 
                 Scanner scan3 = new Scanner(System.in);
                 for (int i = 0; i < 1; i++) {
                     System.out.println("What color or flavor sprinkles would you like on your cake?");
-                    System.out.println("(1) White Sprinkles --- 2.5$");
-                    System.out.println("(2) MultiColor Sprinkles --- 0.1$");
-                    System.out.println("(3) Coconut --- 0.35$");
+                    System.out.println("(1) White Sprinkles --- $2.50");
+                    System.out.println("(2) MultiColor Sprinkles --- $0.10");
+                    System.out.println("(3) Coconut --- $0.35");
                     System.out.println("Enter any number other than 1 or 2 to let the baker pick.");
                     int value = scan3.nextInt();
                     if (value == 1) {
@@ -113,7 +113,7 @@ public class Client {
                         System.out.println("Coconut Flakes are chosen.");
                     } else break;
                 }
-                System.out.println("The choice of the color/flavor of your sprinkles has been chosen");
+                System.out.println("The choice of the color/flavor of your sprinkles has been chosen.");
                 System.out.println("");
 
                 String[] chocoArr = new String[cakeFlavorList.size()];
@@ -135,13 +135,13 @@ public class Client {
                 for (int i = 0; i < 1; i++) {
                     System.out.println("Your cookie options are:");
                     System.out.println("===================================="); 
-                    System.out.println("(1) Sugar Cookie --- 2.5$");
-                    System.out.println("(2) Peanut Butter --- 5.5$");
-                    System.out.println("(3) Chocolate Chip --- 4.0$");
-                    System.out.println("(4) Coconut Cookie --- 4.5$");
-                    System.out.println("(5) Oatmeal Raisin --- 4.0$");
-                    System.out.println("(6) Vanilla Cookie --- 4.0$");
-                    System.out.println("(Other) I finished the drink selection.");
+                    System.out.println("(1) Sugar Cookie --- $2.50");
+                    System.out.println("(2) Peanut Butter --- $5.50");
+                    System.out.println("(3) Chocolate Chip --- $4.00");
+                    System.out.println("(4) Coconut Cookie --- $4.50");
+                    System.out.println("(5) Oatmeal Raisin --- $4.00");
+                    System.out.println("(6) Vanilla Cookie --- $4.00");
+                    System.out.println("(Other) I finished the cookie selection.");
                     int cookieChoice = scanCookie.nextInt();
                     if(cookieChoice==1){
                         cookieType="Sugar";
@@ -161,7 +161,7 @@ public class Client {
                     }
                     else if(cookieChoice==5){
                         cookieType="Oatmeal Raisin";
-                        System.out.println("A oatmeal raisin cookie is chosen");
+                        System.out.println("An oatmeal raisin cookie is chosen.");
                     }
                     else if(cookieChoice==6){
                         cookieType="Vanilla";

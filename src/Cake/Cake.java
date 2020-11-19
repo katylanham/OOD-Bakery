@@ -11,15 +11,23 @@ public abstract class Cake {
         return description;
     }
 
-    public void prepareDough(String type) {
-        System.out.println("Preparing "+ type + " dough");
+    public void prepareDough() {
+        System.out.println("Preparing the dough...");
     }
 
-    public void cookDough(String type) {
-        System.out.println("Cooking " + type + " dough");
+    public void cookDough() {
+        System.out.println("Cooking the dough...");
     }
 
-    public void dishUp(String type) {
-        System.out.println("Put " + type + " on the dish");
+    public void frostCake(String frosting) {
+            System.out.println("Frosting the cake with " + frosting + "frosting.");
+    }
+
+    public void addSprinkles(String sprinkles) {
+            System.out.println("Adding " + sprinkles + " to your cake.");
+    }
+
+    public void dishUp() {
+        System.out.println("Placing your cake on the dish...");
     }
 }

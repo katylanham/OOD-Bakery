@@ -11,33 +11,23 @@ public abstract class withoutNuts implements Cookie{
     //template method
     @Override
     public void prepareCookie() {
-        uncoverCookie();
-        pourInGlass();
-        putPipet();
-
-        if(customerWantsIce()) {
-            addIce();
+        removeFromDisplay();
+        if(customerWantsWarmed()) {
+            warm();
         }
+        bag();
     }
 
-    public void uncoverCookie(){
-        System.out.println("Uncovering the bottle of drink");
-    }
+    public void removeFromDisplay() { System.out.println("Removing the cookie from the display case..."); }
 
-    public void pourInGlass(){
-        System.out.println("Pouring into glass");
-    }
+    public void warm() { System.out.println("Warming up your cookie..."); }
 
-    public void putPipet(){
-        System.out.println("Put pipet in glass");
-    }
-
-    public void addIce(){
-        System.out.println("Adding ice");
+    public void bag(){
+        System.out.println("Putting it in the bag...");
     }
 
     //hook
-    public boolean customerWantsIce(){
+    public boolean customerWantsWarmed(){
         String answer = getUserInput();
 
         if(answer.toLowerCase().startsWith("y")){
@@ -49,7 +39,7 @@ public abstract class withoutNuts implements Cookie{
 
     private String getUserInput(){
         String answer = null;
-        System.out.println("Would you like ice? (y/n)");
+        System.out.println("Would you like your cookie warmed up? (y/n)");
 
         BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
         try {
