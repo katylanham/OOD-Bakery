@@ -41,7 +41,7 @@ public class Baker {
 
 
             System.out.println("Order Completed: " + cake.getDescription() + ".");
-            System.out.println("Cost: $" + cake.cost());
+            System.out.printf("Cost: $%.2f\n", cake.cost());
 
         }
         else if(factoryType.equalsIgnoreCase("Cookie")){
@@ -52,7 +52,7 @@ public class Baker {
             cookie.prepareCookie();
 
             System.out.println(cookie.getDescription() + " order completed.");
-            System.out.println("Cost: $" + cookie.cost());
+            System.out.printf("Cost: $%.2f\n", cookie.cost());
         }
         System.out.println("");
     }
@@ -70,13 +70,13 @@ public class Baker {
 
         for (int i = 0; i < frostingList.length; i++) {
             frosting = frostingList[i];
-            if(frosting.equals("Vanilla")){
+            if(frosting.equals("Vanilla Frosting")){
             	cake = new VanillaFrosting(cake);
             }
-            else if(frosting.equals("Chocolate")) {
+            else if(frosting.equals("Chocolate Frosting")) {
             	cake = new ChocolateFrosting(cake);
             }
-            else if(frosting.equals("Vegan Buttercream")) {
+            else if(frosting.equals("Vegan Buttercream Frosting")) {
             	cake = new veganButtercream(cake);
             }
         }
@@ -86,7 +86,7 @@ public class Baker {
             if(sprinkles.equals("Coconut Flakes")) {
             	cake = new Coconut(cake);
             }
-            else if(sprinkles.equals("MultiColor")){
+            else if(sprinkles.equals("Multicolor Sprinkles")){
             	cake = new MultiColor(cake);
             }
             else if(sprinkles.equals("White")) {
