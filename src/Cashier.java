@@ -2,8 +2,8 @@
 public class Cashier {
     Command command;
 
-    public void takeOrder(Command c){
-        command = c;
-        command.orderUp();
+    public void takeOrder(Command comm){
+        command = comm;
+        command.order();
     }
 }

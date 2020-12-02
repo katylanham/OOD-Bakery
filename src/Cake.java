@@ -9,7 +9,7 @@ public abstract class Cake {
     }
 
     public void prepareBatter(String type) {
-        System.out.println("making "+ type + " batter");
+        System.out.println("Making "+ type + " batter");
     }
 
     public void cookBatter(String type) {

@@ -30,7 +30,7 @@ public abstract class withoutNuts implements Cookie{
     public boolean customerWantsWarmed(){
         String answer = getUserInput();
 
-        if(answer.toLowerCase().startsWith("y")){
+        if(answer.toLowerCase().startsWith("yes")){
             return true;
         }
         else
@@ -39,7 +39,7 @@ public abstract class withoutNuts implements Cookie{
 
     private String getUserInput(){
         String answer = null;
-        System.out.println("Would you like your cookie warmed up? (y/n)");
+        System.out.println("Would you like your cookie warmed up? (yes/no)");
 
         BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
         try {

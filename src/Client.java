@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 public class Client {
     static String cookieType="";
+    // main method
     public static void main(String[] args) {
         Cashier cashier = new Cashier(); 
         Baker baker = new Baker(); 
@@ -41,11 +42,11 @@ public class Client {
                     assert answer != null;
                     if (answer.equals("1")) {
                         cakeType = "Rectangular Cake";
-                        System.out.println("Rectangular Cake is chosen.");
+                        System.out.println("A Rectangular Cake is chosen.");
                         break;
                     } else if (answer.equals("2")) {
                         cakeType = "Circular Cake";
-                        System.out.println("*** Circular Cake is chosen.");
+                        System.out.println("A Circular Cake is chosen.");
                         break;
                     }
                 }
@@ -62,10 +63,10 @@ public class Client {
                     int value = scan.nextInt();
                     if (value == 1) {
                         cakeFlavorList.add("Vanilla");
-                        System.out.println("*** Vanilla is chosen.");
+                        System.out.println("Vanilla is chosen.");
                     } else if (value == 2) {
                         cakeFlavorList.add("Chocolate");
-                        System.out.println("*** Chocolate is chosen.");
+                        System.out.println("Chocolate is chosen.");
                     } else break;
                 }
                 System.out.println("The flavor of your cake has been chosen.");
@@ -81,13 +82,13 @@ public class Client {
                     int value = scan2.nextInt();
                     if (value == 1) {
                         frostingList.add("Vanilla Frosting");
-                        System.out.println("*** Vanilla Frosting is chosen.");
+                        System.out.println("Vanilla Frosting is chosen.");
                     } else if (value == 2) {
                         frostingList.add("Chocolate Frosting");
                         System.out.println("*** Chocolate Frosting is chosen.");
                     } else if (value == 3) {
                         frostingList.add("Vegan Buttercream Frosting");
-                        System.out.println("*** Vegan Buttercream Frosting is chosen.");
+                        System.out.println("Vegan Buttercream Frosting is chosen.");
                     } else break;
                 }
                 System.out.println("The flavor of your frosting has been chosen.");
@@ -97,13 +98,13 @@ public class Client {
                 for (int i = 0; i < 1; i++) {
                     System.out.println("What color or flavor sprinkles would you like on your cake?");
                     System.out.println("(1) White Sprinkles --- $2.50");
-                    System.out.println("(2) MultiColor Sprinkles --- $0.10");
-                    System.out.println("(3) Coconut --- $0.35");
+                    System.out.println("(2) MultiColor Sprinkles --- $1.50");
+                    System.out.println("(3) Coconut --- $3.35");
                     System.out.println("Enter any number other than 1 or 2 to let the baker pick.");
                     int value = scan3.nextInt();
                     if (value == 1) {
                         sprinklesList.add("White Sprinkles");
-                        System.out.println("*** White Sprinkles are chosen.");
+                        System.out.println("White Sprinkles are chosen.");
                     } else if (value == 2) {
                         sprinklesList.add("Multicolor Sprinkles");
                         System.out.println("Multicolor Sprinkles are chosen.");
@@ -142,11 +143,11 @@ public class Client {
                     System.out.println("(6) Vanilla Cookie --- $4.00");
                     System.out.println("(Other) I finished the cookie selection.");
                     int cookieChoice = scanCookie.nextInt();
-                    if(cookieChoice==1){
+                    if(cookieChoice == 1){
                         cookieType="Sugar";
                         System.out.println("A sugar cookie is chosen.");
                     }
-                    else if(cookieChoice==2){
+                    else if(cookieChoice == 2){
                         cookieType="Peanut Butter";
                         System.out.println("A peanut butter cookie is chosen.");
                     }
@@ -170,7 +171,7 @@ public class Client {
                         break;
                     }
                 }
-                System.out.println("The selection of cookies is completed.");
+                System.out.println("The selection of cookies is complete.");
                 System.out.println("");
 
                 CookieOrder cookieOrder = new CookieOrder(baker, cookieType);

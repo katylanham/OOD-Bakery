@@ -9,7 +9,7 @@ import Cookie.vanillaCookie;
 import Cookie.Sugar;
 
 public class CookieFactory {
-
+// cookie types
     public Cookie makeCookie(String cookieType) {
         if (cookieType.equals(null)){
             return null;

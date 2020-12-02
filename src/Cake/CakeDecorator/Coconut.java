@@ -11,7 +11,7 @@ public class Coconut extends SprinklesDecorator {
 
     @Override
     public double cost() {
-        return 0.35 + cake.cost();
+        return 3.35 + cake.cost();
     }
 
     @Override

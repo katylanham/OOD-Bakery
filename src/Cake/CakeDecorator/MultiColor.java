@@ -12,7 +12,7 @@ public class MultiColor extends SprinklesDecorator{
 
     @Override
     public double cost() {
-        return 0.10 + cake.cost();
+        return 1.50 + cake.cost();
     }
 
     @Override

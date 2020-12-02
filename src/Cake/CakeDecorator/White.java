@@ -11,7 +11,7 @@ public class White extends SprinklesDecorator {
 
     @Override
     public double cost() {
-        return 2.5 + cake.cost();
+        return 2.50 + cake.cost();
     }
 
     @Override

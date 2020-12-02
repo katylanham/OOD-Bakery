@@ -8,7 +8,7 @@ public class CookieOrder implements Command{
     }
 
     @Override
-    public void orderUp() {
+    public void order() {
         baker.cookieType = order;
         baker.getOrder("Cookie");
     }

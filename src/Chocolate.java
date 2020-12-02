@@ -9,7 +9,7 @@ this.cake = cake;
 public double cost() {
 	return 0.35 + cake.cost();
 		    }
-
+// return chocolate cake 
 public String getDescription() {
 		        return cake.getDescription() + ", Chocolate";
 		    }

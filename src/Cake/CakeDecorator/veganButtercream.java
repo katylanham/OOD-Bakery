@@ -9,6 +9,7 @@ public class veganButtercream extends FrostingDecorator {
         this.cake = cake; 
     }
 
+    // add cost of vegan buttercream frosting
     @Override
     public double cost() {
         return 0.85 + cake.cost();

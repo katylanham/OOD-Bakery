@@ -1,4 +1,4 @@
 
 public interface Command {
-    public void orderUp();
+    public void order();
 }
