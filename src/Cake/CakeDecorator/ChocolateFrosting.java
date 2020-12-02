@@ -11,7 +11,7 @@ public class ChocolateFrosting extends FrostingDecorator {
 
     @Override
     public double cost() {
-        return 0.60 + cake.cost();
+        return 0.65 + cake.cost();
     }
 
     @Override
