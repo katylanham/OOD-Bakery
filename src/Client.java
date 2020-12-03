@@ -113,7 +113,7 @@ public class Client {
                         System.out.println("Coconut Flakes are chosen.");
                     } else break;
                 }
-                
+                // add
                 System.out.println("The choice of the color/flavor of your sprinkles has been chosen.");
                 System.out.println("");
 
