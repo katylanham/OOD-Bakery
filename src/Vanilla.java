@@ -1,4 +1,5 @@
-// may need to be added later      import Cake.Cake;
+//import Cake.Cake;
+
 public class Vanilla {
 	Cake cake;
 

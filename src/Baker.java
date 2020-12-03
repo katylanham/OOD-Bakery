@@ -40,7 +40,9 @@ public class Baker {
             cake.dishUp();
 
 
+            // print completed order to console based on user input 
             System.out.println("Order Completed: " + cake.getDescription() + ".");
+            // print total price calculated based on user selection
             System.out.printf("Cost: $%.2f\n", cake.cost());
 
         }

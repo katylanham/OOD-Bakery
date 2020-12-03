@@ -14,10 +14,10 @@ public class CakeOrder implements Command {
 
 	@Override
 	public void order() {
-		baker.cakeType = order;
-		baker.cakeFlavorList = this.cakeFlavorList;
-		baker.frostingList = this.frostingList;
-		baker.sprinklesList = this.sprinklesList;
+		Baker.cakeType = order;
+		Baker.cakeFlavorList = this.cakeFlavorList;
+		Baker.frostingList = this.frostingList;
+		Baker.sprinklesList = this.sprinklesList;
 		baker.getOrder("Cake");
 	}
 }

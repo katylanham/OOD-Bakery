@@ -3,7 +3,7 @@ public class SquareCake extends Cake {
 	        description = "Square Cake";
 	    }
 
-	    // cost of rectangular cake
+	    // default cost of rectangular cake
 	    public double cost() {
 	        return 10.00;
 	    }

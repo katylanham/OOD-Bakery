@@ -9,11 +9,11 @@ public class CakeFactory {
 		if (cakeType.equals(null)) {
 			return null;
 		}
-		// if needed, return rectangular cake
+		// if selected, return rectangular cake
 		else if (cakeType.equals("Rectangular Cake")) {
 			return new RectangularCake();
 		}
-		// if needed, return circular cake
+		// if selected, return circular cake
 		else if (cakeType.equals("Circular Cake")) {
 			return new CircularCake();
 		}

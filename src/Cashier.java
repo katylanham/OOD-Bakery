@@ -1,4 +1,4 @@
-// Invoker
+// invokes 
 public class Cashier {
     Command command;
 

@@ -4,7 +4,7 @@ public class CircleCake extends Cake{
 	        description = "Circle Cake";
 	    }
 	
-	// cost of circular cake
+	// default cost of circular cake
     public double cost() {
 	        return 10.00;
 	    }
