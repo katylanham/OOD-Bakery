@@ -7,7 +7,10 @@ public class vanillaCookie extends withoutNuts{
     }
 
     @Override
-    public String getDescription() {
+    public String getDescription(boolean warm, boolean nuts) {
+        if (warm) {
+            return "Vanilla Cookie, warmed";
+        }
         return "Vanilla Cookie";
     }
 }

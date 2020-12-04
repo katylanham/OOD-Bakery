@@ -11,23 +11,23 @@ public abstract class Cake {
         return description;
     }
 
-    public void prepareBatter(String flavor) {
-        System.out.println("Preparing the " + flavor + " batter...");
+    public void prepareBatter(String flavor, javafx.scene.text.Text preparingBatterText) {
+        preparingBatterText.setText("Preparing the " + flavor + " batter...");
     }
 
-    public void cookBatter(String flavor) {
-        System.out.println("Cooking the " + flavor + " batter...");
+    public void cookBatter(String flavor, javafx.scene.text.Text cookingBatterText) {
+        cookingBatterText.setText("Cooking the " + flavor + " batter...");
     }
 
-    public void frostCake(String frosting) {
-            System.out.println("Frosting the cake with " + frosting + "...");
+    public void frostCake(String frosting, javafx.scene.text.Text frostingCakeText) {
+            frostingCakeText.setText("Frosting the cake with " + frosting + "...");
     }
 
-    public void addSprinkles(String sprinkles) {
-            System.out.println("Adding " + sprinkles + " to your cake...");
+    public void addSprinkles(String sprinkles, javafx.scene.text.Text addingSprinklesText) {
+            addingSprinklesText.setText("Adding " + sprinkles + " to your cake...");
     }
 
-    public void dishUp() {
-        System.out.println("Placing your cake on the dish...");
+    public void dishUp(javafx.scene.text.Text dishUpText) {
+        dishUpText.setText("Placing your cake on the dish...");
     }
 }

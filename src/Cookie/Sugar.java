@@ -13,13 +13,25 @@ public class Sugar extends withNuts{
     }
 
     @Override
-    public String getDescription() {
-        return "Sugar";
+    public String getDescription(boolean warmed, boolean nuts) {
+        if (warmed) {
+            if (nuts) {
+                return "Sugar cookie, warmed, with nuts";
+            } else {
+                return "Sugar cookie, warmed";
+            }
+        } else {
+            if (nuts) {
+                return "Sugar cookie, with nuts";
+            }
+        }
+        return "Sugar cookie";
     }
 
     @Override
-    public void addNuts() {
-        System.out.println("Adding nuts...");
+    public void addNuts(javafx.scene.text.Text addingNutsText) {
+        cost = cost + 0.5;
+        addingNutsText.setText("Adding nuts...");
     }
 
     //hook
@@ -48,7 +60,6 @@ public class Sugar extends withNuts{
         if(answer == null){
             answer = "no";
         }
-
         return answer;
     }
 }

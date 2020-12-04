@@ -7,7 +7,10 @@ public class OatmealRaisin extends withoutNuts {
     }
 
     @Override
-    public String getDescription() {
-        return "Oatmeal Raisin";
+    public String getDescription(boolean warm, boolean nuts) {
+        if (warm) {
+            return "Oatmeal Raisin cookie, warmed";
+        }
+        return "Oatmeal Raisin cookie";
     }
 }

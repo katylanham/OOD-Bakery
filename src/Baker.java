@@ -30,16 +30,6 @@ public class Baker {
             CakeFactory factory = new CakeFactory(); 
             cake = factory.makeCake(cakeType); 
 
-
-
-            cake = decorate(cakeFlavorList, frostingList, sprinklesList);
-            cake.prepareBatter(cakeFlavor);
-            cake.cookBatter(cakeFlavor);
-            cake.frostCake(frosting);
-            cake.addSprinkles(sprinkles);
-            cake.dishUp();
-
-
             // print completed order to console based on user input 
             System.out.println("Order Completed: " + cake.getDescription() + ".");
             // print total price calculated based on user selection
@@ -51,9 +41,8 @@ public class Baker {
 
             CookieFactory factory = new CookieFactory();
             cookie = factory.makeCookie(cookieType);
-            cookie.prepareCookie();
 
-            System.out.println(cookie.getDescription() + " order completed.");
+            System.out.println("Cookie order completed.");
             System.out.printf("Cost: $%.2f\n", cookie.cost());
         }
         System.out.println("");

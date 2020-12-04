@@ -7,7 +7,10 @@ public class coconutCookie extends withoutNuts {
     }
 
     @Override
-    public String getDescription() {
+    public String getDescription(boolean warm, boolean nuts) {
+        if (warm) {
+            return "Coconut Cookie, warmed";
+        }
         return "Coconut Cookie";
     }
 }

@@ -6,33 +6,32 @@ import java.io.InputStreamReader;
 
 public abstract class withNuts implements Cookie {
     public abstract double cost();
-    public abstract String getDescription();
+    public abstract String getDescription(boolean warmed, boolean nuts);
 
     //template method
     @Override
-    public void prepareCookie() {
-    	removeFromDisplay();
+    public void prepareCookie(javafx.scene.text.Text removingCookieFromDisplayText, javafx.scene.text.Text addingNutsText,
+                              javafx.scene.text.Text warmingCookieText, javafx.scene.text.Text baggingCookieText, boolean warmedCookie, boolean addNuts) {
+    	removeFromDisplay(removingCookieFromDisplayText);
 
-        if(customerWantsNuts()) {
-            addNuts();
+        if(addNuts) {
+            addNuts(addingNutsText);
         }
-
-        if (customerWantsWarmed()) {
-            warm();
+        if (warmedCookie) {
+            warm(warmingCookieText);
         }
-
-        bag();
+        bag(baggingCookieText);
     }
 
-    public void removeFromDisplay() { System.out.println("Removing the cookie from the display case..."); }
+    public void removeFromDisplay(javafx.scene.text.Text removingCookieFromDisplayText) { removingCookieFromDisplayText.setText("Removing the cookie from the display case..."); }
 
-    public void warm() { System.out.println("Warming up your cookie..."); }
+    public void warm(javafx.scene.text.Text warmingCookieText) { warmingCookieText.setText("Warming up your cookie..."); }
 
-    public void bag(){
-        System.out.println("Putting it in the bag...");
+    public void bag(javafx.scene.text.Text baggingCookieText){
+        baggingCookieText.setText("Putting it in the bag...");
     }
 
-    public abstract void addNuts();
+    public abstract void addNuts(javafx.scene.text.Text addingNutsText);
 
     boolean customerWantsNuts(){
         return true;

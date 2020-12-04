@@ -7,7 +7,10 @@ public class ChocolateChip extends withoutNuts{
     }
 
     @Override
-    public String getDescription() {
-        return "Chocolate Chip";
+    public String getDescription(boolean warm, boolean nuts) {
+        if (warm) {
+            return "Chocolate Chip cookie, warmed";
+        }
+        return "Chocolate Chip cookie";
     }
 }

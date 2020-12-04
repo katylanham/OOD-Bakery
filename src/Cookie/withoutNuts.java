@@ -6,24 +6,27 @@ import java.io.InputStreamReader;
 
 public abstract class withoutNuts implements Cookie{
     public abstract double cost();
-    public abstract String getDescription();
+    public abstract String getDescription(boolean warm, boolean nuts);
 
     //template method
     @Override
-    public void prepareCookie() {
-        removeFromDisplay();
-        if(customerWantsWarmed()) {
-            warm();
+    public void prepareCookie(javafx.scene.text.Text removingCookieFromDisplayText, javafx.scene.text.Text addingNutsText,
+                              javafx.scene.text.Text warmingCookieText, javafx.scene.text.Text baggingCookieText, boolean cookieWarmed,
+                              boolean cookieAddNuts) {
+        addingNutsText.setText("");
+        removeFromDisplay(removingCookieFromDisplayText);
+        if(cookieWarmed) {
+            warm(warmingCookieText);
         }
-        bag();
+        bag(baggingCookieText);
     }
 
-    public void removeFromDisplay() { System.out.println("Removing the cookie from the display case..."); }
+    public void removeFromDisplay(javafx.scene.text.Text removingCookieFromDisplayText) { removingCookieFromDisplayText.setText("Removing the cookie from the display case..."); }
 
-    public void warm() { System.out.println("Warming up your cookie..."); }
+    public void warm(javafx.scene.text.Text warmingCookieText) { warmingCookieText.setText("Warming up your cookie..."); }
 
-    public void bag(){
-        System.out.println("Putting it in the bag...");
+    public void bag(javafx.scene.text.Text baggingCookieText){
+        baggingCookieText.setText("Putting it in the bag...");
     }
 
     //hook
