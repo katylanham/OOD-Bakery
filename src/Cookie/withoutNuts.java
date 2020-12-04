@@ -17,6 +17,8 @@ public abstract class withoutNuts implements Cookie{
         removeFromDisplay(removingCookieFromDisplayText);
         if(cookieWarmed) {
             warm(warmingCookieText);
+        } else {
+            warmingCookieText.setText("");
         }
         bag(baggingCookieText);
     }

@@ -16,9 +16,13 @@ public abstract class withNuts implements Cookie {
 
         if(addNuts) {
             addNuts(addingNutsText);
+        } else {
+            addingNutsText.setText("");
         }
         if (warmedCookie) {
             warm(warmingCookieText);
+        } else {
+            warmingCookieText.setText("");
         }
         bag(baggingCookieText);
     }
